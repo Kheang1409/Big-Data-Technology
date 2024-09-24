@@ -39,6 +39,17 @@
 - Splits message by delimiter and populates columns with the split text.
 - Sends values into a table in HBase.
 
+### Hive
+- Create a Hive Table based on its data source "HBash Table"
+- Build the jar and use command line "Spark Submit"
+- ```bash
+    spark-submit \
+      --class com.example.className \
+      --master local[*] \
+      --conf spark.sql.catalogImplementation=hive \
+      --conf spark.hadoop.hive.metastore.uris=thrift://127.0.0.1:9083 \
+      target/filename.jar
+    ```
 ---
 
 ## ODBC Configuration and Power BI Setup
